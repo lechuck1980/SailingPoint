@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
+//const config = require("./config/config.js");
 
 const app = express();
 
@@ -42,10 +43,6 @@ app.use(apiversion, resultRoute.routes);
 app.use(apiversion, sailorRoute.routes);
 app.use(apiversion, userRoute.routes);
 
-// // simple route
-// app.get("/", (req, res) => {
-//   res.json({ message: "Welcome to Student App - Backend!!!" });
-// });
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
